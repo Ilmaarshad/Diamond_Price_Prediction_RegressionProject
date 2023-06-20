@@ -24,7 +24,9 @@ class DataTransformation:
     def get_data_transformation_object(self):
         try:
             logging.info('Data Transformation initiated')
+
             # Define which columns should be ordinal-encoded and which should be scaled
+
             categorical_cols = ['cut', 'color','clarity']
             numerical_cols = ['carat', 'depth','table', 'x', 'y', 'z']
             
@@ -91,7 +93,7 @@ class DataTransformation:
             input_feature_test_df=test_df.drop(columns=drop_columns,axis=1)
             target_feature_test_df=test_df[target_column_name]
             
-            ## Trnasformating using preprocessor obj
+            ## Transformating using preprocessor obj
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
 

@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from src.component.data_transformation import DataTransformation
 
 
-## Intitialize the Data Ingestion Configuration
+## Intitialize the Data Ingetion Configuration
 
 @dataclass
 class DataIngestionconfig:
@@ -52,5 +52,5 @@ if __name__ == '__main__':
     obj = DataIngestion()
     train_data,test_data = obj.initiate_data_ingestion()
     data_transformation= DataTransformation()
-    train_arr,test_arr,_ = data_transformation.initaite_data_transformation(train_data_path,test_data_path)
+    train_arr,test_arr,_ = data_transformation.initaite_data_transformation(train_data,test_data)
 
